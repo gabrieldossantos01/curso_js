@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais</title>
+    <style>
+      
+    #gringo{
+      display: none;
+      margin-top: 20px;
+     
+    }
+
+    #br{
+      display: none;
+      margin-top: 20px;
+    }
+    </style>
+  
+</head>
+<body>
+    <h1>qual é o seu pais</h1>
+   
+    <p>diga seu pais:</p> 
+    
+    <input type="text" name="txp" id="tx">
+    
+    <input type="button" value="enviar" id="sub">
+     
+    <div id="res"></div>
+
+    <div id="gringo">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/prZPXFFDyXQ?si=AbSMMH9I7r7lLQm2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <div id="br">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Br_eHJ9fM54?si=bvz7uTfOgUVcqhxM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    
+    <script>
+      let sub = window.document.getElementById('sub')
+      sub.addEventListener('click', val)
+
+      function val() {
+        let br = window.document.getElementById('br')
+        let mary = window.document.getElementById('gringo')
+         let res = window.document.getElementById('res')
+         let d1 = window.document.querySelector('input#tx')
+         let str = String(d1.value)
+          if(str == 'brasil') {
+            res.innerHTML = 'Você é brasileiro'
+            br.style.display = 'block'
+            mary.style.display = 'none'
+          } else {
+            res.innerHTML = `Você é gringo`
+            mary.style.display = 'block'
+            br.style.display = 'none'
+          }
+         
+      }
+    </script>
+</body>
+</html>

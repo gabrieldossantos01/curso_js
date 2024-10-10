@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>007 da arte </title>
+    <style>
+        #tg{
+            margin-top: 5px;
+        }
+
+        #inum , #inum2{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>olá, some os numeros</h1>
+    <input type="number" name="number1" id="inum"> + 
+    <input type="number" name="number2" id="inum2" >
+    =
+    <span id="span1"></span> <br>
+    <input type="submit" value="somar" id="tg" >
+
+    <script>
+        let sub = window.document.getElementById('tg')
+        sub.addEventListener('click' , somar) 
+
+        function somar() {
+        let n1 = window.document.getElementById('inum')
+        let n2 = window.document.getElementById('inum2')
+        let d1 = Number(n1.value)
+        let d2 = Number(n2.value)
+        let rs = d1 + d2
+        let sp = window.document.getElementById('span1')
+        sp.innerText = `a resposta  é: ${rs}`
+
+        } 
+
+    </script>
+</body>
+</html>

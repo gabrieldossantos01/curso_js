@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(94, 146, 163);
+            color: white;
+            font: normal 15pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>iniciando estudos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>aprendendo a usar <strong>DOM</strong> em js</p>
+    <div>
+        clique em mim
+    </div>
+
+    <script>
+       let corpo = window.document.body
+       let v1 = window.document.getElementsByTagName('h1')[0] 
+       window.document.write('esta escrito assim: ' + v1.innerText)
+      
+       window.alert(v1.innerText)
+    </script>
+</body>
+</html>
